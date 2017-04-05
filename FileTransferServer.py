@@ -99,11 +99,11 @@ if __name__ == '__main__':
                     for i in range(len(greetings)):
                         data = remoteSock.recv(64) # 64 is Fixed Size for greetings
                         msg = data.decode('utf-8')
+                        print(msg, str(msg==greetings[i]))
                         recv_greetings.append(msg)
                     for i in range(len(greetings)):
                         if greetings[i] != recv_greetings[i]:
                             raise Exception("Incorrect greeting")
-                        
                     # Greeting phase succeeded here
                     connectionStanding = True
                     # 3. Wait for file requests or offers

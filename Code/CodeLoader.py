@@ -1,6 +1,4 @@
 """
-Version 0.1.0
-
 This code can be run to load a fitting pair of
 .pyenc and .pykey files, which will then be "decrypted" with
 XOR One Time Pad, so the contained code can be compiled and run.
@@ -9,10 +7,14 @@ Both, CodeLoader and CodePacker are supposed to be run as a
 compiled PyInstaller .exe file for Windows.
 """
 
+__author__ = 'Lord Inquisitor Thaddeus'
+__version__ = '0.1.0'
+
 """
 Encrypt / Decrypt using XOR
 """
 def decrypt_code(codefile, keyfile, debug=False):
+    """decrypt helper function"""
     def decrypt(bytestring, key, debug=False):
         if debug:
             print("Original:")

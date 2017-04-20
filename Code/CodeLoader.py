@@ -10,11 +10,12 @@ compiled PyInstaller .exe file for Windows.
 __author__ = 'Lord Inquisitor Thaddeus'
 __version__ = '0.1.0'
 
-"""
-Encrypt / Decrypt using XOR
-"""
+import os
+
+
+# Encrypt / Decrypt using XOR
 def decrypt_code(codefile, keyfile, debug=False):
-    """decrypt helper function"""
+    # decrypt helper function
     def decrypt(bytestring, key, debug=False):
         if debug:
             print("Original:")
@@ -35,11 +36,9 @@ def decrypt_code(codefile, keyfile, debug=False):
     cryptokey = open(keyfile, 'rb').read()
     return decrypt(enc_code, cryptokey)
 
-"""
-Load every file with a .pyenc-ending, then decrypt and run it.
-"""
+
+# Load every file with a .pyenc-ending, then decrypt and run it.
 if __name__ == '__main__':
-    import os
     for filename in os.listdir(os.getcwd()):
         if filename[-6:] == ".pyenc":
             print("Opening", filename)

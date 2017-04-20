@@ -1,8 +1,10 @@
 """
 Diffie-Hellmann
+
 Algorithm for Key Exchange
-Source: https://www.codeproject.com/articles/70330/implementation-of-diffie-hellman-algorithm-of-key
-Author: Apriorit Inc, Tatyana Khitrova, 2 Apr 2010
+
+Code is created following the tutorial on:
+https://www.codeproject.com/articles/70330/implementation-of-diffie-hellman-algorithm-of-key
 """
 import random
 from fractions import gcd

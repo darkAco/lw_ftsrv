@@ -1,5 +1,4 @@
 """
-Version 0.1.0
 This code can be run to pack every .py-file into
 a .pyenc and .pykey pair, which uses XOR One Time Pad encryption.
 This can be loaded and run anywhere using the CodeLoader.
@@ -7,10 +6,14 @@ Both, CodeLoader and CodePacker are supposed to be run as a
 compiled PyInstaller .exe file for Windows.
 """
 
+__author__ = 'Lord Inquisitor Thaddeus'
+__version__ = '0.1.0'
+
 """
 Encrypt using XOR
 """
 def encrypt_code(codefile, debug=False):
+    """encrypt helper function"""
     def encrypt(bytestring, key, debug=False):
         if debug:
             print("Original:")

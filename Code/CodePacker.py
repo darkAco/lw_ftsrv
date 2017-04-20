@@ -6,14 +6,12 @@ Both, CodeLoader and CodePacker are supposed to be run as a
 compiled PyInstaller .exe file for Windows.
 """
 
-__author__ = 'Lord Inquisitor Thaddeus'
 __version__ = '0.1.0'
 
-"""
-Encrypt using XOR
-"""
+
+# Encrypt using XOR
 def encrypt_code(codefile, debug=False):
-    """encrypt helper function"""
+    # encrypt helper function
     def encrypt(bytestring, key, debug=False):
         if debug:
             print("Original:")
@@ -42,11 +40,10 @@ def encrypt_code(codefile, debug=False):
         fcode.write(output)
     return output
 
-"""
-Load every file with a .py-ending,
-generate a length-fitting key,
-encrypt the file using XOR-OneTimePad
-"""
+
+# Load every file with a .py-ending,
+# generate a length-fitting key,
+# encrypt the file using XOR-OneTimePad
 def encrypt_directory(dir_path):
     assert (os.path.exists(dir_path) and os.path.isdir(dir_path)), "Directory not found."
     for filename in os.listdir(dir_path):
@@ -57,9 +54,8 @@ def encrypt_directory(dir_path):
         else:
             print("Skipping", filename)
 
-"""
-Main processes args and calls encrypt_directory depending on them
-"""
+
+# Main processes args and calls encrypt_directory depending on them
 if __name__ == '__main__':
     import os
     import random

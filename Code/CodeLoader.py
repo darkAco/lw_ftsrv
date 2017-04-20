@@ -7,7 +7,6 @@ Both, CodeLoader and CodePacker are supposed to be run as a
 compiled PyInstaller .exe file for Windows.
 """
 
-__author__ = 'Lord Inquisitor Thaddeus'
 __version__ = '0.1.0'
 
 import os

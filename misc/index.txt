@@ -1,0 +1,8 @@
+EvolutionalNetworks.py
+EvolutionalNetworks.py
+EvolutionTrainer.py
+new_mnist_reader.py
+pybrain_GeneticAlgorithm.py
+subsamplingNetwork.py
+supervised_learning.py
+unsupervised_learning.py
